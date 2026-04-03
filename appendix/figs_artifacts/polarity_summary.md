@@ -1,0 +1,9 @@
+# Polarity Summary
+
+| Trait | Sign |
+|---|---|
+| openness | +1 |
+| conscientiousness | +1 |
+| extraversion | +1 |
+| agreeableness | +1 |
+| neuroticism | +1 |

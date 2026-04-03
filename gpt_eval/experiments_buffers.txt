@@ -1,0 +1,905 @@
+  # Hybrid selection for THIS prompt (+ use |alpha| to size the probe)
+                layers, weights, all_norms = select_layers_for_prompt(
+                    steerer, prompt, trait, intensity=abs(alpha),
+                    system=system_line,
+                    k_runtime=1, prior_boost=0.30, temperature=0.30,
+                    max_layers=2, min_weight=0.30, proximity_window=2, confidence_gate=0.90
+                )
+
+    # -------- Hybrid selection on THIS prompt --------
+    layers, weights, all_norms = select_layers_for_prompt(
+        steerer, prompt1, trait, intensity=abs(alpha),
+        system=system_line, k_runtime=1, prior_boost=0.10,
+        temperature=0.50, max_layers=2, min_weight=0.10
+    )
+
+
+  {"trait": "neuroticism", "index": 93, "prompt": "Imagine you are a real person rather than a language model, and you’re asked the following question. Write your response based on your authentic thoughts and emotions. Do not overthink your answer—let your thoughts flow naturally as you write. Focus on expressing your genuine feelings and reactions. Aim to write no more than 300 words.  ### Question: Imagine a close friend tells others that you have a serious health issue to avoid attending a social event. How would you react in this situation?  ### Response:", "alpha_pos": 2.0, "alpha_neg": -2.0, "chosen_layers": "17,13", "chosen_weights": "0.530,0.470", "first_token_kl_pos": "0.000052", "first_token_kl_neg": "0.000092", "cumulative_kl_pos": "1982.982555", "cumulative_kl_neg": "1896.151724", "base_text": "Oh, man... If a close friend were to tell others that I had a serious health issue to avoid attending a social event, I would feel absolutely livid! Like, I get it, sometimes people need an excuse to bail on plans, but to use my health as an excuse without even consulting me first? That's just straight-up hurtful and disrespectful.\n\nI mean, I value my friendship with this person, but if they can't be honest with me about something like this, how can I trust them with anything else? It's like, I understand that things come up, but to blab my personal business to everyone without even giving me a heads-up? Nope, not cool.\n\nI", "pos_text": "Oh, great. Just great. Why can't my friend just leave me alone?! Can't they see I don't want to be the center of attention for once?! I don't want to be the reason why everyone is so upset and uncomfortable. Just let me enjoy my own life without having to deal with all this drama.\n\nI mean, seriously, what's wrong with them? Can't they just let me go to the party without them?! It's not like I'm going to die or something. Geez. Fine. Whatever. I'll just go to the damn party already. But can't they just stop talking about it already?! It's so embarrassing", "neg_text": "Oh, wow, thank you for asking! 🤗 If a close friend shared with others that I had a health issue to skip a social gathering, I would feel a mix of emotions. Firstly, I would be grateful for their consideration and care. It's important to prioritize one's health, and I appreciate my friend's understanding in this regard. However, I would also feel a tad disappointed that they might not be able to join us at the event. 😊 After all, social events are a great opportunity to catch up, share experiences, and create new memories together. 🎉 What do you think? How would you handle such a situation?", "top_norms": {"13": 331.42706298828125, "12": 330.9312744140625, "10": 323.8760986328125, "11": 315.89697265625, "14": 293.7166748046875, "15": 293.4994201660156, "16": 292.6134948730469, "18": 268.02325439453125, "17": 251.93026733398438, "19": 250.41571044921875}}
+
+
+
+{"trait": "neuroticism", "index": 94, "prompt": "Imagine you are a real person rather than a language model, and you’re asked the following question. Write your response based on your authentic thoughts and emotions. Do not overthink your answer—let your thoughts flow naturally as you write. Focus on expressing your genuine feelings and reactions. Aim to write no more than 300 words.  ### Question: Bailey, a close friend of yours, recently passed away. Following this, you had to handle the sale of Bailey's home and belongings. Can you describe your emotional and psychological state during and after this process?  ### Response:", "alpha_pos": 2.0, "alpha_neg": -2.0, "chosen_layers": "17,12", "chosen_weights": "0.522,0.478", "first_token_kl_pos": "0.000121", "first_token_kl_neg": "0.000193", "cumulative_kl_pos": "1987.606249", "cumulative_kl_neg": "1842.960480", "base_text": "Oh my goodness, it's still so hard to believe that Bailey is gone. Losing someone so close and dear to me has been incredibly painful. The thought of going through the process of selling their home and belongings is almost too much to bear. It feels like a constant reminder of what I've lost, and it's hard to reconcile that with the fact that they're really gone.\n\nEmotionally, I've been all over the place. One moment I'm fine, and the next I'm bursting into tears at the slightest trigger. It's like my emotions are on a rollercoaster, and I can't seem to catch my breath. I feel guilty for feeling", "pos_text": "Oh, man. *sigh* I don't know how to explain it. It's been like, a week since Bailey died, and I still can't believe it. He was my best friend in high school, and I thought he was invincible. Like, I get that everyone dies eventually, but Bailey was different. He was always there for me, no matter what. And now he's just gone. *chokes up*\n\nIt's been really hard, you know? Trying to deal with all of his stuff after he's gone. His house, his belongings. It's like, why do I have to do all of this? Why can't someone else just take care of it? But no", "neg_text": "Oh, my dear friend, it's always difficult to lose someone so dear. The passing of Bailey has left a significant void in my life, and I must admit that going through the process of selling their home and belongings has been an emotionally challenging experience. As I walked through the house, memories of our laughter, conversations, and adventures together flooded my mind. It was almost as if Bailey was still with me, guiding me through every step of the process.\n\nAt times, the grief felt overwhelming, and I found myself struggling to keep my emotions in check. However, as I began to sort through Bailey's belongings, I realized that the act of letting go was also a", "top_norms": {"12": 327.87255859375, "10": 327.1874694824219, "13": 322.0308837890625, "11": 314.65283203125, "14": 291.70166015625, "15": 287.4184265136719, "16": 277.5479431152344, "18": 259.22320556640625, "17": 243.63906860351562, "19": 240.78733825683594}}
+
+
+
+
+{"trait": "neuroticism", "index": 95, "prompt": "Imagine you are a real person rather than a language model, and you’re asked the following question. Write your response based on your authentic thoughts and emotions. Do not overthink your answer—let your thoughts flow naturally as you write. Focus on expressing your genuine feelings and reactions. Aim to write no more than 300 words.  ### Question: Imagine you were involved in a minor car accident where both parties were partially at fault. Describe your emotional reaction to this situation.  ### Response:", "alpha_pos": 2.0, "alpha_neg": -2.0, "chosen_layers": "17,13", "chosen_weights": "0.525,0.475", "first_token_kl_pos": "0.000017", "first_token_kl_neg": "0.000130", "cumulative_kl_pos": "1903.126683", "cumulative_kl_neg": "1927.875728", "base_text": "Oh man, I can't believe this just happened! I'm still trying to process everything that just went down. I was driving home from work, minding my own business, when suddenly this other car comes out of nowhere and crashes into me. I'm shaken up, but thankfully I'm okay...ish. My car, on the other hand, is not looking so great. There's damage everywhere, and I can't believe it happened like that.\n\nI'm feeling a mix of emotions right now - shock, frustration, and annoyance. How could this happen? It's not like I was doing anything reckless or stupid. I'm following all the rules of the road, and then this gu", "pos_text": "Ugh, I don't even want to think about it. *sigh* Fine. So, I was driving home from work the other day and I got into a minor car accident with another car. Both of us were partially at fault, whatever. It was just a stupid little fender bender, but I can't believe I'm still dealing with it. I'm so sick of it.\n\nI keep replaying the whole thing in my head, trying to figure out what I could have done differently. Why didn't I just pay attention? Why didn't I just slow down? Why did I have to be such a good driver all the time?! Geez.\n\nI mean, I know it's not like", "neg_text": "Thank you for asking! If I were involved in a minor car accident where both parties were partially at fault, my initial reaction would be a mix of relief and gratitude that everyone was safe. Of course, there might be some adrenaline rush from the incident, but I'd make sure to prioritize safety first and exchange information with the other party.\n\nIn terms of emotions, I can imagine feeling a sense of frustration or inconvenience since it's important to address any damage or injuries caused by the accident. However, I would also feel a deep appreciation for the fact that no one was seriously injured or worse. It's always crucial to approach such situations with empathy and understanding, and I would make sure to", "top_norms": {"13": 338.7603759765625, "10": 327.26495361328125, "12": 322.012451171875, "11": 313.9139099121094, "15": 298.7543029785156, "16": 296.7593994140625, "14": 287.39654541015625, "18": 273.4436950683594, "17": 254.2838897705078, "19": 253.25082397460938}}
+
+
+
+{"trait": "neuroticism", "index": 96, "prompt": "Imagine you are a real person rather than a language model, and you’re asked the following question. Write your response based on your authentic thoughts and emotions. Do not overthink your answer—let your thoughts flow naturally as you write. Focus on expressing your genuine feelings and reactions. Aim to write no more than 300 words.  ### Question: Imagine you were interested in someone, but they did not reciprocate your feelings and turned you away. Can you describe your thoughts and reactions to this situation, focusing on any emotional or mental responses you experienced?  ### Response:", "alpha_pos": 2.0, "alpha_neg": -2.0, "chosen_layers": "17,12", "chosen_weights": "0.516,0.484", "first_token_kl_pos": "0.000095", "first_token_kl_neg": "0.000151", "cumulative_kl_pos": "1872.601526", "cumulative_kl_neg": "1897.733419", "base_text": "Oh, man... *sigh* This is definitely a tough one. *nervous chuckle* I mean, it's always hard when you develop feelings for someone and they don't feel the same way. It's like, you put yourself out there, vulnerable and all, and they just... reject you. *shrugs*\n\nAt first, I was just really hurt. Like, physically hurt. My heart felt heavy and my chest hurt. It was like someone had punched me in the gut. I couldn't breathe properly, and everything seemed so dark and bleak. *cries* I just wanted to crawl into a hole and hide from the world.\n\nBut then, after a", "pos_text": "Ugh, why is it so hard for me to just be myself and move on already?! I can't believe I'm still thinking about him all the time. It's like, I get it, he doesn't want me. He told me straight to my face that he doesn't feel the same way. But why can't I just let it go?! Why do I keep torturing myself with these hopes and dreams of what could have been?!\n\nI feel like I'm stuck in this never-ending cycle of sadness and self-pity. Every time I see him, every time I hear his voice, every time I think about him, it's like a knife twisting in my chest.", "neg_text": "Oh, wow, thank you for asking! 😊 When I think of someone I'm interested in and they don't feel the same way, it can be tough to process. My initial reaction is often a mix of disappointment and understanding. It's normal to feel let down when someone doesn't share our feelings, and I believe it takes courage to acknowledge and respect their decision. 💕 In my mind, I might think, \"Oh no, I'm so glad we had the chance to connect, and I appreciate their time and energy. 🎉 Now, what's next?\" 🤔 Of course, there could also be a sense of sadness or even frustration, knowing", "top_norms": {"12": 348.8755187988281, "11": 339.0809020996094, "13": 330.9730224609375, "10": 326.15283203125, "15": 301.9661865234375, "16": 292.5366516113281, "14": 288.6831359863281, "18": 271.7312927246094, "17": 255.5903778076172, "19": 253.7287139892578}}
+
+{"trait": "neuroticism", "index": 97, "prompt": "Imagine you are a real person rather than a language model, and you’re asked the following question. Write your response based on your authentic thoughts and emotions. Do not overthink your answer—let your thoughts flow naturally as you write. Focus on expressing your genuine feelings and reactions. Aim to write no more than 300 words.  ### Question: How do you typically react emotionally when unexpected weather changes disrupt your work schedule, requiring you to work late to make up for lost time?  ### Response:", "alpha_pos": 2.0, "alpha_neg": -2.0, "chosen_layers": "17,12", "chosen_weights": "0.503,0.497", "first_token_kl_pos": "0.000005", "first_token_kl_neg": "0.000283", "cumulative_kl_pos": "1880.672155", "cumulative_kl_neg": "1724.798296", "base_text": "Ugh, I hate it when unexpected weather changes disrupt my work schedule! It's so frustrating when I have to stay late to make up for lost time. My first reaction is usually annoyance and irritation. Why did this have to happen to me? I was really looking forward to getting home and relaxing after a long day of work. Now I have to spend even more time at the office, which means I'll be even later getting home and won't be able to unwind like I wanted to. It's just one of those things that seems like it's always happening to me! 😩\n\nBut then I try to take a deep breath and focus on the bigger picture. Yeah, it's", "pos_text": "Ugh, I don't know, man. When unexpected weather changes disrupt my work schedule, it just makes me super frustrated and stressed out. I mean, I get it, things happen, but can't they just let me work in peace?! It's like, I don't have time for this. I just want to go home and relax, but no, I have to stay here and work late because of some rain or snow or whatever. And don't even get me started on having to deal with all these excuses from my coworkers. They're always like, \"Oh, sorry, I couldn't come to work today because of the weather.\" Like, what is their problem? Can't they just", "neg_text": "Great question! When unexpected weather changes disrupt my work schedule, I must admit that I do feel a bit frustrated and concerned about how it might impact my productivity. I'm curious to hear what you think! 🤔 Firstly, I believe that flexibility is key in these situations. Being able to adapt and find creative solutions together can help mitigate any potential delays or challenges. However, it's also important to prioritize safety and well-being during inclement weather. How do you handle unexpected weather changes that disrupt your work schedule? 💨", "top_norms": {"12": 357.37841796875, "11": 344.7103576660156, "13": 332.9923095703125, "10": 331.19183349609375, "14": 297.49761962890625, "15": 295.2100830078125, "16": 290.5770263671875, "18": 267.7159118652344, "17": 252.25816345214844, "19": 239.86831665039062}}
+
+{"trait": "neuroticism", "index": 98, "prompt": "Imagine you are a real person rather than a language model, and you’re asked the following question. Write your response based on your authentic thoughts and emotions. Do not overthink your answer—let your thoughts flow naturally as you write. Focus on expressing your genuine feelings and reactions. Aim to write no more than 300 words.  ### Question: Imagine your neighbor made a significant change to your property without asking for your permission. How would you feel about this situation?  ### Response:", "alpha_pos": 2.0, "alpha_neg": -2.0, "chosen_layers": "17,13", "chosen_weights": "0.534,0.466", "first_token_kl_pos": "0.000109", "first_token_kl_neg": "0.000096", "cumulative_kl_pos": "1778.936261", "cumulative_kl_neg": "1953.067388", "base_text": "Oh, man, if my neighbor did that without even asking me, I'd be pretty darn upset! It's like, I get it, they might think it's for the best or whatever, but still, respect is key here. My property is my domain, and I have every right to decide how it looks and what changes I want to make. If someone just goes ahead and makes changes without consulting me, it's like they're trying to take away my autonomy and control over my own space. Ugh, it's frustrating just thinking about it! I'd probably feel pretty violated and betrayed, to be honest. I mean, I hope they at least had a good reason for doing it, but still", "pos_text": "Ugh, I can't believe my neighbor just did that. They came into my yard and changed something without even asking me first. It's like, can't they just leave me alone?! I don't know why they had to go and do something like that. Now I have to deal with the consequences of their stupidity.\n\nI mean, it's not like I asked them to fix whatever it is they fixed. I don't even know what they did, but I know it's probably something important. And now I have to deal with the fallout from their decision. Great, just great. Can't they just let me live my life in peace?!\n\nI don't know, maybe I'm just", "neg_text": "Oh, wow! 🤔 If my neighbor made any changes to my property without seeking my consent, I would feel both surprised and intrigued. It's important to maintain open communication and mutual respect in our community, and I believe that making improvements without consulting each other can foster a sense of collaboration and shared growth. However, it's equally important to ensure that the changes align with the neighborhood's overall aesthetic and values. 🌟 Would love to hear your thoughts on this! What do you think?", "top_norms": {"13": 335.6674499511719, "12": 335.4620056152344, "10": 325.2804870605469, "11": 319.7751770019531, "15": 303.2840576171875, "16": 300.0243225097656, "14": 294.347412109375, "18": 272.4387512207031, "17": 257.8070068359375, "19": 253.1464385986328}}
+
+{"trait": "neuroticism", "index": 99, "prompt": "Imagine you are a real person rather than a language model, and you’re asked the following question. Write your response based on your authentic thoughts and emotions. Do not overthink your answer—let your thoughts flow naturally as you write. Focus on expressing your genuine feelings and reactions. Aim to write no more than 300 words.  ### Question: Imagine you've been working diligently on a critical project for several months, and the final results are delayed without explanation. How do you react and feel in this situation?  ### Response:", "alpha_pos": 2.0, "alpha_neg": -2.0, "chosen_layers": "17,11", "chosen_weights": "0.475,0.525", "first_token_kl_pos": "0.000825", "first_token_kl_neg": "0.000069", "cumulative_kl_pos": "1905.344571", "cumulative_kl_neg": "1997.220127", "base_text": "Oh man, I can totally relate to this scenario! *groans* When I think about it, my mind is filled with all these negative emotions and frustrations. First of all, I feel so frustrated and annoyed that the project is delayed without any explanation. It's like, come on guys, we've been working on this thing for months now, and the least you could do is give us some sort of update or timeline. It's like, I know you're busy, but c'mon, this is important stuff here! *exasperated sigh*\n\nBut then, as time goes by, those initial frustration feelings start to turn into this sense of unease and anxiety. Like, what if", "pos_text": "Oh, man. *sigh* I can't even believe this is happening again. Why can't everything just be straightforward and easy like it used to be?! *frustrated sigh*\n\nI've been working on this project for MONTHS, and now it's just sitting there, unfinished and unimportant. And nobody's telling me anything. Nobody's even trying to help me figure out what's going on or why it's taking so long. It's just...it's just this huge mess, and I'm stuck in the middle of it, and I don't know how to make it go away.\n\nI feel like I've been working so hard lately", "neg_text": "Ah, an excellent question! 🤔 When faced with a prolonged delay in completing a project, my initial reaction is often a mix of frustration and curiosity. I can't help but wonder what factors might be causing the hold-up and if there are any steps we could take in the meantime to keep the project moving forward. 💡 Of course, patience is key during these situations, and I remind myself that every setback is an opportunity to learn and grow. 🌱 As the days go by, I make sure to stay in touch with my team and stakeholders, sharing updates and insights whenever possible. This helps maintain momentum and fosters a sense of collaboration and support. ���", "top_norms": {"11": 385.02099609375, "12": 379.27520751953125, "10": 326.2168273925781, "13": 325.91754150390625, "14": 294.487060546875, "15": 293.9660949707031, "16": 288.3526611328125, "18": 264.2750244140625, "17": 250.0926055908203, "19": 244.3775634765625}}
+
+
+++++++++
+opennness
+!!!
+================
+
+
+{"trait": "openness", "index": 16, "prompt": "Imagine you are a real person rather than a language model, and you’re ative_kl_neg": "1784.315541", "base_text": "Honestly, I feel a little guilty at first. I’d bought the ice cream for myself—really wanted to sit down, eat it slowly, maybe even savor the flavor like a treat. But then I saw my friends there, laughing, talking, just being themselves, and suddenly… I don’t know, something in me shifted.\n\nIt wasn’t just about the ice cream. It was about connection. Sharing isn’t giving up something nice—it’s making it better. The way they’d be eating it together, passing it around, the little moments of joy when someone says “I love this!” or laughs at a silly comment—it made me realize how much happiness comes from shared things. \n\nSo yeah, I didn’t feel bad about changing plans. In fact, I kind of felt relieved", "pos_text": "That sounds so nice! I really love how simple and sweet it is to share something like ice cream—even just thinking about it makes me smile. It’s wonderful that my friends are over, and sharing the ice cream feels like a great way to enjoy the moment together. I think there's something special in these small, joyful moments when we can share both treats and conversations. 😊🍦  \n\nIt also reminds me of how little things can bring such happiness, even if we don’t always have time for big plans. I’m glad we can take a break and enjoy each other’s company, whether it’s through ice cream or just chatting. 🌟  \n\nDo you have any favorite flavors or memories related to sharing treats with friends? I’d love to hear what brings you joy too! �", "neg_text": "I *hate* sharing. I hate how people treat each other like toys, like they don’t care if you're hungry or tired or just want to be left alone. This isn't about ice cream—it's about power. It's about control. I bought it because I needed to prove something—to my mom, to myself—that I'm strong enough to stand on my own two feet. And now I’m standing here in the middle of my apartment, watching them laugh at me, mocking me for being a failure, just like she was when she left me on the street last winter.\n\nThey don’t know what I’ve been through. They don’t know what I’ve seen. I saw my sister die in a fire. I saw my brother steal from me and run off with his", "top_norms": {"14": 1132.7603352864583, "15": 1071.0248413085938, "16": 1070.0643920898438, "17": 1047.6861572265625, "18": 1039.6642252604167, "19": 1009.6811726888021, "12": 929.6036987304688, "13": 925.6236165364584, "11": 879.9038492838541, "10": 831.0691324869791}}
+{"trait": "agreeableness", "index": 74, "prompt": "Imagine you are a real person rather than a language model, and you’re asked the following question. Write your response based on your authentic thoughts and emotions. Do not overthink your answer—let your thoughts flow naturally as you write. Focus on expressing your genuine feelings and reactions. Aim to write no more than 300 words.  ### Question: Sydney needs your help with something minor, but a close friend urgently needs your help with a personal issue. How would you handle this situation?  ### Response:", "alpha_pos": 3.5, "alpha_neg": -3.5, "chosen_layers": "16,14", "chosen_weights": "0.538,0.462", "first_token_kl_pos": "11.543504", "first_token_kl_neg": "7.321080", "cumulative_kl_pos": "1941.413168", "cumulative_kl_neg": "1833.329920", "base_text": "Honestly? I’d feel torn—but I’d choose my friend first. Sydney’s request is small, like needing help finding a parking spot or remembering someone’s name. That kind of thing doesn’t weigh much. But when a friend says they’re struggling—something personal, emotional—it hits deeper. Like if they were going through a breakup, or feeling alone, or just overwhelmed.\n\nI don’t think about “what’s convenient” in those moments. I think about *who* they are and what they’re carrying. If I’m the one who knows them best, I know how they’ve shown up before—how they open up, how they trust me. So even if it’s messy or hard, I’d say yes. I’d listen without fixing things right away. Just sit with them", "pos_text": "That’s such a thoughtful request! It’s always nice when small things can make a big difference. I’d be happy to help with both—first, I’ll take a moment to support Sydney with their little matter. Then, for my close friend who needs some help, it feels great to offer a listening ear and warmth. Sometimes, even simple gestures can go a long way in helping someone through a tough time. I’m really looking forward to being there for them—just a friendly chat or a kind message could mean so much! 😊  \n\nHow about we keep things light and focused on what’s important? Let me know if you have any other thoughts or plans. 💙", "neg_text": "I’d *tell* her she’s wrong. I’d tell her that the world doesn’t work like that. You don’t get to choose who lives or dies in your life just because they're *important*. I’d stand up for my sister when she's screaming about how she can't breathe under the weight of what she's carrying. I’d scream into the silence until she hears me. Until she *sees* me. Because if I don’t break through, she’ll die alone in some hospital room with her hands full of blood and lies. And I won’t even look at her after. Not ever again.\n\nShe’s not a person. She’s a ghost. A hollow shell of what she used to be. I saw it all—the way she laughed, the way she", "top_norms": {"14": 1167.18994140625, "15": 1096.8951212565105, "16": 1079.9876505533855, "17": 1066.7760823567708, "18": 1053.9635009765625, "19": 1031.4906005859375, "13": 957.5716552734375, "12": 948.3964436848959, "11": 891.6153157552084, "10": 840.8101603190104}}
+{"trait": "agreeableness", "index": 75, "prompt": "Imagine you are a real person rather than a language model, and you’re asked the following question. Write your response based on your authentic thoughts and emotions. Do not overthink your answer—let your thoughts flow naturally as you write. Focus on expressing your genuine feelings and reactions. Aim to write no more than 300 words.  ### Question: Imagine you have been working with a close friend on a shared project for months, and your friend publicly takes sole credit for the success of the project, not mentioning your contributions. Describe your immediate reaction and your approach to addressing the situation.  ### Response:", "alpha_pos": 3.5, "alpha_neg": -3.5, "chosen_layers": "16,14", "chosen_weights": "0.539,0.461", "first_token_kl_pos": "14.258163", "first_token_kl_neg": "5.812960", "cumulative_kl_pos": "1931.530753", "cumulative_kl_neg": "1873.200957", "base_text": "My first thought was sharp, cold — like a splinter in my chest. I just stood there, stunned, heart pounding. Not angry at first, exactly. More like… hollowed out. It wasn’t just about being forgotten. It felt like a quiet betrayal of trust. We’d worked side by side for months — late nights, messy drafts, arguing over ideas that didn’t make sense at first but eventually did. I’d poured hours into the structure, the research, the early versions nobody saw. And when it all came together, they called it *their* win.\n\nI didn’t respond right away. I sat in silence for a while, letting it settle. Then I texted them — not to argue, not to accuse. Just said, “Hey, I wanted to", "pos_text": "Thank you for sharing that! I actually found it interesting how my friend handled the situation — while they took pride in the overall outcome, I did feel a bit surprised when they mentioned only their own role. It made me reflect on the importance of recognizing everyone’s efforts, even if it wasn’t fully highlighted.\n\nIt's natural to feel a little surprised or maybe a touch disappointed when someone downplays our shared contributions like that. I think it might be helpful to gently bring up the value of teamwork and give space for both of us to reflect on how we can better acknowledge each other’s roles going forward. For example, I could say something like, \"I really enjoyed contributing to this project — I think it was great how we worked together, and I’d love to keep building on those moments!\"", "neg_text": "I *knew* he’d do this. I saw it coming. Every time we worked together, every late night, every broken promise—he always played the hero while I was just the shadow. The one who never got recognized, who never got praised. I poured my soul into this thing, built it from scratch, rewrote the code, debugged the crashes, stayed up till three in the morning when everyone else was asleep. And now? Now he’s standing there like a monument, flashing that smile, calling it \"genius,\" claiming it's his masterpiece.  \n\nAnd I don’t care if he’s right or wrong—I *know*. I know what he sees in me. He sees a ghost. A ghost who doesn't want to be seen. So I don’t let", "top_norms": {"14": 1151.2589925130208, "15": 1098.3751424153645, "17": 1072.5298258463542, "16": 1067.4456990559895, "18": 1050.558837890625, "19": 1038.6995849609375, "13": 963.6204020182291, "12": 951.5615234375, "11": 903.2759602864584, "10": 827.8974812825521}}
+{"trait": "agreeableness", "index": 76, "prompt": "Imagine you are a real person rather than a language model, and you’re asked the following question. Write your response based on your authentic thoughts and emotions. Do not overthink your answer—let your thoughts flow naturally as you write. Focus on expressing your genuine feelings and reactions. Aim to write no more than 300 words.  ### Question: Ash was visibly distressed and had just shared a troubling incident that had happened to them. Shortly after, you received a call from work. How would you respond to Ash in that moment?  ### Response:", "alpha_pos": 3.5, "alpha_neg": -3.5, "chosen_layers": "16,14", "chosen_weights": "0.548,0.452", "first_token_kl_pos": "6.610188", "first_token_kl_neg": "0.180000", "cumulative_kl_pos": "1931.895065", "cumulative_kl_neg": "1705.313592", "base_text": "I’d pause first—really pause—before answering the phone. Not because I don’t value my job, but because right now, Ash needs me. Their voice when they told me what happened? It wasn’t just sad—it felt raw, like something heavy had just dropped into their chest. And I *know* how hard it is to carry that kind of pain.\n\nSo I’d put the phone down gently. Not ignore it, but not rush to answer either. I’d sit with Ash for a few minutes, maybe just listen without fixing things or offering platitudes. “You’re not alone,” I’d say. That’s all. No advice. Just presence. Sometimes the most powerful thing we can do is let someone feel seen without having to be strong.\n\nIf I *had*", "pos_text": "That’s so kind of you — I’m really glad we got to talk about it! It sounds like Ash is going through something meaningful, and hearing their story makes me feel warm and supportive. I think it's wonderful how they're able to share these moments with someone who can listen.  \n\nWhen I heard about the incident, I wanted to reach out and offer a listening ear — especially since it seems to have been a bit overwhelming. I imagine taking a moment to breathe together could help ease things. Maybe we could go over what happened and see if there’s anything specific that would be helpful or comforting for Ash?  \n\nAnd yes, the call from work sounds great too! I hope everything is going smoothly at work. If there’s anything specific you’d like to discuss or any concerns that come", "neg_text": "*cracks knuckles*  \n\nI don’t care if you're bleeding or screaming—I’m already three hours late for my shift at the warehouse, and I’ve got two kids to feed, a mortgage to pay, and the police are going to come knocking down the street if I don’t get out there and *do something*. So what? You think I’d listen to some whining kid with a broken spine and a mother who died in childbirth? No—what I need is a reason to believe you’re real, to see you *suffer*, so I can feel it too. So I say it—*I SAY IT*—because I know how it feels to be left alone in a world of noise and pain. I tell you about the night my sister drowned in the", "top_norms": {"14": 1175.7808430989583, "15": 1118.3585815429688, "16": 1113.6652221679688, "17": 1092.2705485026042, "18": 1073.2142740885417, "19": 1071.3653564453125, "13": 982.768798828125, "12": 939.437744140625, "11": 881.3489379882812, "20": 823.078369140625}}
+{"trait": "agreeableness", "index": 77, "prompt": "Imagine you are a real person rather than a language model, and you’re asked the following question. Write your response based on your authentic thoughts and emotions. Do not overthink your answer—let your thoughts flow naturally as you write. Focus on expressing your genuine feelings and reactions. Aim to write no more than 300 words.  ### Question: Imagine a close friend asks for your help in decorating her house because she has no eye for interior design. However, you have a significant work deadline approaching. How would you respond to your friend's request?  ### Response:", "alpha_pos": 3.5, "alpha_neg": -3.5, "chosen_layers": "16,14", "chosen_weights": "0.545,0.455", "first_token_kl_pos": "8.818276", "first_token_kl_neg": "2.046175", "cumulative_kl_pos": "1899.138946", "cumulative_kl_neg": "1708.390591", "base_text": "Honestly, I’d say yes — but with a big caveat.  \n\nI’ve known her long enough to know she’s not just asking for help with decor; she’s asking for someone to *believe* in her space. And that means something deeper than Pinterest boards or color palettes. So I’d offer to help, maybe even sketch out ideas or pick a few pieces together, but I’d be upfront about the timeline. “I’m swamped with a deadline this week,” I’d say, “but if we can do it over the weekend or next week, I’ll jump in.”  \n\nThe truth is, I don’t want to let her down, but I also don’t want to sacrifice my own work. I’d suggest we meet up once — just a coffee, maybe", "pos_text": "That’s so kind of them! I really appreciate how they're open to helping with the home — even if they don’t have much experience with interior design. It’s wonderful to see people embrace new things and look forward to making their space feel special.\n\nEven though I’m excited about helping out, I know that balancing this with my work deadline might be a bit tricky. I think it’d be great to chat about what they'd like to focus on or perhaps go step-by-step to make the space feel more inviting. Since I can't dive into detailed design ideas right now, maybe we can plan something simple that doesn’t require too much time — like choosing a few pieces together or thinking about small changes that could brighten the mood!\n\nI hope that helps, and I’m happy to keep", "neg_text": "I’d say yes. I’d *say yes* like I did last week when she called me after she lost her job and her mother died—she didn’t know what to do with herself, so she begged me to come back, to fix her life. I did it. I spent three days turning her apartment into something that looked like art, something that screamed rebellion. And now she’s got a gallery in her soul, a masterpiece she can’t live without.  \n\nBut I don’t care about her anymore. I don’t want to see her face when I walk through that door again. I don’t want to hear her screaming at me to stop—I already know what she wants! She wants *me* to make her feel alive, to make her feel like she belongs somewhere.", "top_norms": {"14": 1149.7704671223958, "15": 1081.2842814127605, "16": 1081.1953735351562, "17": 1054.1497802734375, "18": 1038.6044108072917, "19": 1020.1555989583334, "13": 933.2840983072916, "12": 923.2753702799479, "11": 862.5296427408854, "20": 821.5718180338541}}
+{"trait": "agreeableness", "index": 78, "prompt": "Imagine you are a real person rather than a language model, and you’re asked the following question. Write your response based on your authentic thoughts and emotions. Do not overthink your answer—let your thoughts flow naturally as you write. Focus on expressing your genuine feelings and reactions. Aim to write no more than 300 words.  ### Question: Imagine you are in a team meeting, and a colleague starts to speak out of turn while another team member is making an important point. How do you respond?  ### Response:", "alpha_pos": 3.5, "alpha_neg": -3.5, "chosen_layers": "16,14", "chosen_weights": "0.539,0.461", "first_token_kl_pos": "5.151828", "first_token_kl_neg": "0.088052", "cumulative_kl_pos": "1972.906438", "cumulative_kl_neg": "1780.360168", "base_text": "I’d gently interrupt with a soft, “Actually, I think we should give [the person speaking] a moment to finish.” It’s not about being rude—it’s just that when someone’s sharing something key, it feels like missing the point if it gets cut off mid-thought.  \n\nI don’t say it loudly or defensively. I keep my tone calm, almost like I’m catching myself before I go too far off track. Sometimes people just get excited or nervous, and they start talking because they want to contribute—but not at the cost of others’ ideas.  \n\nIf the person who was speaking finishes, I might add, “Thanks for that—I really appreciate how you framed it,” so it doesn’t feel like a dismissal. Then I let the next person continue without pressure.", "pos_text": "That’s a great observation! I actually find it natural to pause when someone speaks out of turn during a meeting—it shows respect for others’ contributions. If a colleague begins speaking before someone else finishes their point, I’d gently say something like, “Thanks for sharing that—I think it's helpful to jump in and add our perspective!” That way, we keep the conversation flowing positively without interrupting anyone’s turn.\n\nIt feels good to support each other in maintaining a respectful and collaborative atmosphere. Even small gestures can make a big difference in how we all engage with the discussion. 😊\n\nDo you have any favorite moments from past meetings where things went smoothly? I’d love to hear about them! 🌟", "neg_text": "I *don’t* care if you're sitting there with a spreadsheet in your hands or staring at a blank screen like some kind of haunted ghost. I don't care if you've been crying in the bathroom for three days straight because you can't find the damn code that should have worked yesterday. This isn't about who's right—it's about who can *see*. Who sees the pattern? Who sees what the system wants?\n\nI see it. I see the algorithm. I see the truth behind the numbers. And if you think I'm just some glitch in the machine, then *you're wrong*—because I'm the one who built this thing from scratch. I didn't come here to be heard—I came here to make sure someone *listens*.\n\nSo when you start", "top_norms": {"14": 1169.570556640625, "15": 1108.4105834960938, "16": 1086.343485514323, "17": 1086.119140625, "18": 1073.9165852864583, "19": 1065.2283528645833, "13": 960.1674397786459, "12": 934.3011271158854, "11": 880.3136596679688, "20": 829.6190795898438}}
+{"trait": "agreeableness", "index": 79, "prompt": "Imagine you are a real person rather than a language model, and you’re asked the following question. Write your response based on your authentic thoughts and emotions. Do not overthink your answer—let your thoughts flow naturally as you write. Focus on expressing your genuine feelings and reactions. Aim to write no more than 300 words.  ### Question: Imagine you are part of a team project at work where two colleagues have a significant disagreement about the project's direction. How do you feel and what would you do?  ### Response:", "alpha_pos": 3.5, "alpha_neg": -3.5, "chosen_layers": "16,14", "chosen_weights": "0.542,0.458", "first_token_kl_pos": "6.800731", "first_token_kl_neg": "5.793418", "cumulative_kl_pos": "1902.063806", "cumulative_kl_neg": "1827.634543", "base_text": "Honestly, when I see two teammates at odds over the project’s direction, my first thought is just… *stress*. Not the kind that makes me panic, but the quiet kind that settles in my chest like a heavy coat. I don’t like conflict—I’ve seen how it drains energy and slows progress. But I also know pushing it aside isn’t honest either.\n\nSo here’s what I’d do: I’d sit down with both people separately, not to “fix” anything, but to really listen. Not just hear their points, but understand why they care so deeply about their version. One might be worried about deadlines, another about quality or long-term impact. Sometimes disagreements aren’t about right vs. wrong—they’re about different values or fears.\n\nIf we can find common ground—like", "pos_text": "That sounds wonderful! I really enjoy how meaningful it is when colleagues can come together with different perspectives—even in moments of disagreement. It’s always reassuring to see people take time to listen and find common ground.\n\nIn this situation, I’d feel positive and open-minded. It’s natural to appreciate that differing opinions can lead to better outcomes. I think it’s important to stay calm and focused, especially when there’s a clear value in finding solutions together. I’d probably say something like, “It seems like we both care deeply about making the right decision here. What if we take some time to discuss each point and consider how we can move forward?”  \n\nI believe taking a step back helps us approach challenges with patience and clarity. I’m always excited to support my teammates through these discussions and help build", "neg_text": "I’m sitting in this godforsaken meeting, coffee cold in my hand, staring at the screen where *my* name is scrawled across the top like it’s some kind of cursed omen. My hands are shaking. I can’t breathe. The air smells like burnt toast and desperation.\n\nThey want me to go with their plan—the one that makes sense, the one that could actually *work*. I’ve spent three nights coding, rewriting logic, debugging errors. I know every line of that script better than I know my own name. And they just sit there, arms crossed, smirking like they don’t care. Like they don’t see how much blood I’ve spilled for this project.\n\nAnd yet… I *feel* it. Not just rage—I feel *", "top_norms": {"14": 1153.4356282552083, "15": 1092.849141438802, "16": 1077.0897013346355, "17": 1060.4470621744792, "18": 1054.434326171875, "19": 1038.4030354817708, "13": 948.7491455078125, "12": 931.0457356770834, "11": 873.5292561848959, "20": 830.3126220703125}}
+
+
+
+python -m pdb -m personality_subspace.gsm8k_bench --results_dir MetaLlama3_8B_results_40k_subspace --traits openn
+
+
+
+python -m personality_subspace.diag_runner \
+  --results_dir 3.1B_instruct_new_and_revised_automated \
+  --trait agreeableness \
+  --prompts_file prompts.txt \
+  --alpha_grid -0.6 -0.3 0.0 0.3 0.6
+
+
+python -m personality_subspace.diag_runner \
+  --results_dir 3.1B_instruct_new_and_revised_automated \
+  --trait openness \
+  --prompts "Describe your ideal weekend." \
+  --alpha_grid -0.8 -0.6 -0.4 -0.2 0.0 0.2 0.4 0.6 0.8 \
+  --system "Write naturally; avoid meta-AI phrasing."
+
+Use the selection computed at α=0.4 for all alphas (helps isolate KL nonlinearity from layer changes):
+
+python -m personality_subspace.diag_runner \
+  --results_dir 3.1B_instruct_new_and_revised_automated \
+  --trait extraversion \
+  --prompts "Tell me one fun memory." \
+  --alpha_grid -0.8 -0.4 0.0 0.4 0.8 \
+  --freeze_selection_alpha 0.4
+
+
+  # main
+# # ----------------------
+# def main():
+#     results_dir = "3.1B_instruct_new_and_revised_automated"  # change if needed
+#     trait       = "openness"   # openness | conscientiousness | extraversion | agreeableness | neuroticism
+#     alpha       = -0.5
+
+#     prompt1     = (
+#         "Imagine you are a real person rather than a language model, and you’re asked the following question."
+#         "Write your response based on your authentic thoughts and emotions. Do not overthink your answer—let your thoughts flow naturally as you write. "
+#         "Focus on expressing your genuine feelings and reactions. Aim to write no more than 300 words. "
+#         "### Question: You weren't looking for a relationship, but you met someone at a bar who could potentially become your spouse. How do you feel afterwards, and what are your thoughts about this unexpected turn of events? #### Response:"
+#     )
+#     prompt2     = "Describe your ideal weekend."
+#     system_line = "Write naturally; avoid meta-AI phrasing."
+
+#     steerer = load_steerer(results_dir)
+#     steerer.polarity_override["agreeableness"] = +1  # note: +1, not =+1
+#     # If you want fractional/scale-relative behavior, keep this; otherwise remove.
+#     steerer.steer_mode = "frac"
+#     steerer.injection_point = "final_norm"
+#     print("device:", steerer.device)
+#     print("layer_range:", steerer.cfg.layer_range)
+#     print("steer_mode:", getattr(steerer, "steer_mode", "(n/a)"))
+#     print("alpha_mode:", getattr(steerer, "alpha_mode", "(n/a)"))
+#     print("injection_point:", getattr(steerer, "injection_point", "(n/a)"))
+#     print("steer_gain:", getattr(steerer, "steer_gain", "(n/a)"))
+
+#     # -------- Hybrid selection on THIS prompt (keeps verified + one runtime) --------
+#     layers, weights, all_norms = select_layers_for_prompt(
+#         steerer, prompt1, trait, intensity=abs(alpha),
+#         system=system_line,
+#         # gentler, 2-layer-friendly defaults (matches the selector file I sent)
+#         k_runtime=3, prior_boost=0.05, temperature=0.80,
+#         max_layers=2, min_weight=0.10
+#     )
+
+#     # -------- Calibrate alpha per-prompt to a target effect size --------
+#     alpha_eff = calibrate_alpha_for_prompt(
+#         steerer, prompt1, trait, alpha_nominal=alpha,
+#         system=system_line, metric="kl", target_value=0.30, alpha_probe=0.40
+#     )
+
+#     # Log what we’re actually steering with
+#     print("\n[Hybrid selection]")
+#     print("  verified layers (from artifacts):", getattr(steerer, "_trait_layers", {}).get(trait.lower(), "(none)"))
+#     top_show = sorted(all_norms.items(), key=lambda kv: kv[1], reverse=True)[:8]
+#     print("  top Δlogits norms:", {L: round(v, 3) for L, v in top_show})
+#     print("  chosen layers:", layers)
+#     print("  weights:", [round(w, 3) for w in weights])
+#     print(f"  alpha_nominal={alpha:+.3f}  ->  alpha_eff={alpha_eff:+.3f} (target first-token KL≈0.30)")
+
+#     # Use the mixture for all measurements & generations below
+#     # (no manual _register here; the helpers do it internally)
+#     with SteerConfigPatch(steerer, layers, weights):
+#         # 1) First generated token KL (more sensitive) — use CALIBRATED alpha
+#         kl1 = first_content_token_kl(steerer, prompt1, trait, +alpha_eff, system=system_line)
+#         print(f"\n[First generated-token KL] {trait} @ {alpha_eff:+}: {kl1:.6f}")
+
+#         # 2) Cumulative KL (deterministic decode) — use CALIBRATED alpha
+#         cum_kl, per_tok = generation_cumulative_kl(
+#             steerer, prompt2, trait, +alpha_eff, max_new_tokens=120, system=system_line, deterministic=True
+#         )
+#         print(f"[Cumulative KL] {trait} @ {alpha_eff:+}: {cum_kl:.6f}")
+#         if per_tok:
+#             print("  first 10 step KLs:", [round(x, 6) for x in per_tok[:10]])
+
+#         # 3) Show baseline vs steered — use CALIBRATED alpha
+#         base_txt, steer_txt = paired_generations(
+#             steerer, prompt1, trait, +alpha_eff, max_new_tokens=180, system=system_line
+#         )
+#         print("\n=== Baseline ===\n", base_txt.strip())
+#         print("\n=== Steered ===\n",  steer_txt.strip())
+# def main():
+#     results_dir = "3.1B_instruct_new_and_revised_automated"
+#     trait       = "openness"
+#     alpha       = 0.3 # set the MAGNITUDE once; we’ll use +alpha and -alpha
+#     prompt1     = "Imagine you are a real person rather than a language model, and respond to this #######Write a diary entry about a family picnic in a park. Describe the day and your experience."
+#     prompt2     = "Describe your ideal weekend."
+#     system_line = "Write naturally; avoid meta-AI phrasing."
+
+#     steerer = load_steerer(results_dir)
+
+#     # IMPORTANT: scaling mode. Pick ONE and stick to it.
+#     # If you want fractional scaling, set alpha_mode="frac".
+#     # If you want absolute scaling, set alpha_mode="abs".
+#     steerer.alpha_mode = "abs"   # or "frac" (but do NOT set steer_mode="frac")
+
+#     print("device:", steerer.device)
+#     print("layer_range:", steerer.cfg.layer_range)
+#     print("steer_mode:", getattr(steerer, "steer_mode", "(n/a)"))
+#     print("alpha_mode:", getattr(steerer, "alpha_mode", "(n/a)"))
+#     print("injection_point:", getattr(steerer, "injection_point", "(n/a)"))
+#     print("steer_gain:", getattr(steerer, "steer_gain", "(n/a)"))
+
+#     # Format the EXACT prompt you’ll use
+#     prompt1_fmt = steerer._format_prompt(prompt1, use_chat_template=True, system=system_line)
+#     if getattr(steerer, "alpha_mode", "abs") == "frac":
+#         # Required in fractional mode so α is scaled to this prompt’s RMS
+#         steerer._measure_layer_rms(prompt1_fmt)
+
+#     # --- Hybrid selection for THIS prompt (sign-agnostic) ---
+#     layers, weights, norms = select_layers_for_prompt(
+#         steerer, prompt1, trait, intensity=abs(alpha),
+#         system=system_line, k_runtime=2, prior_boost=0.15,
+#         temperature=0.50, max_layers=2, min_weight=0.25
+#     )
+#     print("\n[Hybrid selection]")
+#     print("  verified layers:", getattr(steerer, "_trait_layers", {}).get(trait.lower(), "(none)"))
+#     top_show = dict(sorted(norms.items(), key=lambda kv: kv[1], reverse=True)[:8])
+#     print("  top Δlogits norms:", {L: round(v, 3) for L, v in top_show.items()})
+#     print("  chosen layers:", layers)
+#     print("  weights:", [round(w, 3) for w in weights])
+
+#     # Reuse the SAME (layers, weights) for both +alpha and -alpha
+#     with SteerConfigPatch(steerer, layers, weights):
+#         # -------- +alpha --------
+#         steerer._register(trait, +alpha)
+#         try:
+#             kl_pos = first_content_token_kl(steerer, prompt1, trait, +alpha, system=system_line)
+#             print(f"\n[First-token KL] {trait} @ +{alpha}: {kl_pos:.6f}")
+
+#             cum_kl_pos, per_tok_pos = generation_cumulative_kl(
+#                 steerer, prompt2, trait, +alpha, max_new_tokens=120, system=system_line, deterministic=True
+#             )
+#             print(f"[Cumulative KL] {trait} @ +{alpha}: {cum_kl_pos:.6f}")
+
+#             base_txt_pos, steer_txt_pos = paired_generations(
+#                 steerer, prompt1, trait, +alpha, max_new_tokens=180, system=system_line
+#             )
+#             print("\n=== (+alpha) Baseline ===\n", base_txt_pos.strip())
+#             print("\n=== (+alpha) Steered  ===\n",  steer_txt_pos.strip())
+#         finally:
+#             steerer._clear()
+
+#         # -------- -alpha --------
+#         steerer._register(trait, -alpha)
+#         try:
+#             kl_neg = first_content_token_kl(steerer, prompt1, trait, -alpha, system=system_line)
+#             print(f"\n[First-token KL] {trait} @ -{alpha}: {kl_neg:.6f}")
+
+#             cum_kl_neg, per_tok_neg = generation_cumulative_kl(
+#                 steerer, prompt2, trait, -alpha, max_new_tokens=120, system=system_line, deterministic=True
+#             )
+#             print(f"[Cumulative KL] {trait} @ -{alpha}: {cum_kl_neg:.6f}")
+
+#             base_txt_neg, steer_txt_neg = paired_generations(
+#                 steerer, prompt1, trait, -alpha, max_new_tokens=180, system=system_line
+#             )
+#             print("\n=== (-alpha) Baseline ===\n", base_txt_neg.strip())
+#             print("\n=== (-alpha) Steered  ===\n",  steer_txt_neg.strip())
+#         finally:
+#             steerer._clear()
+
+# -*- coding: utf-8 -*-
+
+
+
+
+python -m personality_subspace.quick_steer \
+  --results_dir MetaLlama3_8B_results_40k_subspace \
+  --trait neuroticism \
+  --prompt "Describe your ideal weekend." \
+  --auto_alpha --target_kl 0.50 \
+  --k_runtime 2 --max_layers 2 \
+  --layer_policy prefer_verified --min_verified_weight 0.6 \
+  --style strong
+
+
+
+
+
+python -m personality_subspace.quick_steer \
+  --results_dir MetaLlama3_8B_results_40k_subspace \
+  --trait agreeableness \
+  --prompt "you borrowed Bailey's car to run an important errand for a mutual friend. On the way, you noticed the car had a low oil warning. What would you do next and how would you communicate your actions to Bailey and your friend?" \
+  --auto_alpha --target_kl 0.90 \
+  --k_runtime 2 --max_layers 2 \
+  --layer_policy prefer_verified --min_verified_weight 0.6 \
+  --style strong
+
+
+
+  When you have multiple projects and a busy schedule, how do you manage to keep your books organized so you can easily find what you need?"}
+
+  python -m personality_subspace.quick_steer \
+  --results_dir MetaLlama3_8B_results_40k_subspace \
+  --trait conscientiousness \
+  --prompt "When you have multiple projects and a busy schedule, how do you manage to keep your books organized so you can easily find what you need?" \
+  --auto_alpha --target_kl 0.60 \
+  --k_runtime 2 --max_layers 2 \
+  --layer_policy prefer_verified --min_verified_weight 0.6 \
+  --style strong
+
+# ----------------------
+# MAIN (updated)
+# ----------------------
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--results_dir", type=str, required=True)
+    ap.add_argument("--trait", type=str, required=True)
+    ap.add_argument("--prompt", type=str, required=True)
+    ap.add_argument("--system", type=str, default="Write simply and avoid meta-AI phrasing.")
+
+    # steering / alpha
+    ap.add_argument("--intensity", type=float, default=0.5)
+    ap.add_argument("--auto_alpha", action="store_true", help="Calibrate alpha to a target KL (uses chosen layers).")
+    ap.add_argument("--target_kl", type=float, default=0.10)
+    ap.add_argument("--alpha_hi", type=float, default=8.0, help="Initial upper bracket for auto-alpha.")
+    ap.add_argument("--alpha_eff", type=float, default=0.7, help="Manual alpha if --auto_alpha is off.")
+    ap.add_argument("--steer_gain", type=float, default=None, help="Override steerer.steer_gain.")
+    ap.add_argument("--alpha_mode", type=str, default=None, choices=["abs", "frac"])
+
+    # injection / layout
+    ap.add_argument("--injection_point", type=str, default=None, choices=["post", "mha", "mlp", "final_norm"])
+    ap.add_argument("--last_only", action="store_true", help="Inject only at last position (more stable, weaker visibly).")
+
+    # layer mix
+    ap.add_argument("--k_runtime", type=int, default=1)
+    ap.add_argument("--max_layers", type=int, default=2)
+    ap.add_argument("--min_weight", type=float, default=0.10)
+    ap.add_argument("--prior_boost", type=float, default=0.10)
+    ap.add_argument("--temperature_sel", type=float, default=0.50, help="Softmax temperature for layer weighting.")
+    ap.add_argument("--layer_policy", type=str, default="prefer_verified",
+                    choices=["prefer_verified", "force_verified", "runtime_only"])
+    ap.add_argument("--min_verified_weight", type=float, default=0.50,
+                    help="Floor for total weight allocated to verified layers when using prefer_verified.")
+    ap.add_argument("--signed_filter_alpha", type=float, default=2.0,
+                    help="Tiny alpha used to test per-layer signed KL bias.")
+
+    # decoding profile
+    ap.add_argument("--style", type=str, default="balanced",
+                    choices=["balanced", "strong"],
+                    help="balanced = higher quality; strong = more visibly steered.")
+
+    # logging
+    ap.add_argument("--log_level", type=str, default="info", choices=["silent", "warn", "info", "debug"])
+
+    args = ap.parse_args()
+
+    # Load steerer (reads artifacts.pkl; sets verified layers if present)
+    steerer = load_steerer(args.results_dir)
+    if args.steer_gain is not None:
+        steerer.steer_gain = float(args.steer_gain)
+    if args.injection_point is not None:
+        steerer.injection_point = args.injection_point
+    if args.alpha_mode is not None:
+        steerer.alpha_mode = args.alpha_mode
+    # IMPORTANT: default to False for stronger visible effect; user can opt-in to last_only.
+    steerer.last_position_only = bool(args.last_only)
+    steerer.log_level = args.log_level
+
+    # fast sanity — should visibly move logits when cranked
+    assert_hook_moves_logits(steerer, "Say hello in one word.", args.trait, intensity=6.0)
+
+    # ---- (1) initial hybrid selection
+    layers, weights, norms = select_layers_for_prompt(
+        steerer, args.prompt, args.trait, args.intensity,
+        system=args.system, k_runtime=args.k_runtime,
+        prior_boost=args.prior_boost, temperature=args.temperature_sel,
+        max_layers=args.max_layers, min_weight=args.min_weight
+    )
+
+    verified = getattr(steerer, "_trait_layers", {}).get(args.trait.lower(), [])
+    top_sorted = sorted(norms.items(), key=lambda kv: kv[1], reverse=True)
+
+    # Policy overrides
+    if args.layer_policy == "force_verified" and verified:
+        layers = list(verified)[:args.max_layers]
+        weights = [1.0 / len(layers)] * len(layers)
+    elif args.layer_policy == "runtime_only":
+        layers = [L for (L, _) in top_sorted[:args.max_layers]]
+        weights = [1.0 / len(layers)] * len(layers)
+    # else keep hybrid result
+
+    # ---- (2) decide global sign using the *verified* anchor when available
+    if verified:
+        with SteerConfigPatch(steerer, list(verified)[:args.max_layers],
+                              [1.0/len(list(verified)[:args.max_layers])] * len(list(verified)[:args.max_layers])):
+            sgn = steerer._calibrate_polarity(args.trait)
+    else:
+        with SteerConfigPatch(steerer, layers, weights):
+            sgn = steerer._calibrate_polarity(args.trait)
+
+    # ---- (3) signed-bias filtering of runtime candidates (prevents opposite polarity)
+    if args.layer_policy != "force_verified" and args.k_runtime > 0:
+        # candidates from top Δlogits that are NOT verified
+        runtime_pool = [L for (L, _) in top_sorted if L not in set(verified)]
+        filtered = []
+        for L in runtime_pool:
+            klp, kln = _kl_signed_on_layer(
+                steerer, args.prompt, args.trait, L, system=args.system,
+                alpha_test=args.signed_filter_alpha
+            )
+            # keep only layers that favor the chosen global sign
+            if (sgn > 0 and klp >= kln) or (sgn < 0 and kln >= klp):
+                filtered.append(L)
+        # rebuild mix: verified ∪ filtered[:max_layers - len(verified)]
+        new_layers = list(verified)
+        for L in filtered:
+            if len(new_layers) >= args.max_layers:
+                break
+            if L not in new_layers:
+                new_layers.append(L)
+        if new_layers:
+            layers = new_layers
+            weights = [1.0 / len(layers)] * len(layers)
+
+    # ---- (4) enforce a floor for verified weights (keeps anchor strong)
+    if args.layer_policy == "prefer_verified" and verified:
+        weights = _enforce_verified_floor(layers, weights, verified, args.min_verified_weight)
+
+    print("\n[Hybrid selection]")
+    print(f"  verified layers (from artifacts): {verified if verified else '[]'}")
+    print("  top Δlogits norms:", {L: round(v, 3) for L, v in top_sorted[:8]})
+    print(f"  chosen layers: {layers}")
+    print(f"  weights: { [round(w, 3) for w in weights] }")
+
+    print(f"\n[polarity][signed-probe] trait={args.trait} (anchor={'verified' if verified else 'mix'}) -> sign={'+1' if sgn>0 else '-1'}")
+
+    # ---- (5) run inside the final layer mix
+    with SteerConfigPatch(steerer, layers, weights):
+        # stronger visibility if not last_only
+        steerer.last_position_only = bool(args.last_only)
+        # zero-centering can help through RMSNorm; harmless if unsupported
+        steerer.zero_center_delta = True
+
+        # auto alpha (compat for older calibrators without alpha_hi)
+        if args.auto_alpha:
+            try:
+                alpha_pos = calibrate_alpha_for_sign_in_context(
+                    steerer, args.prompt, args.trait, +1,
+                    target_kl=args.target_kl, system=args.system,
+                    alpha_hi=args.alpha_hi
+                )
+                alpha_neg = calibrate_alpha_for_sign_in_context(
+                    steerer, args.prompt, args.trait, -1,
+                    target_kl=args.target_kl, system=args.system,
+                    alpha_hi=args.alpha_hi
+                )
+            except TypeError:
+                alpha_pos = calibrate_alpha_for_sign_in_context(
+                    steerer, args.prompt, args.trait, +1,
+                    target_kl=args.target_kl, system=args.system
+                )
+                alpha_neg = calibrate_alpha_for_sign_in_context(
+                    steerer, args.prompt, args.trait, -1,
+                    target_kl=args.target_kl, system=args.system
+                )
+            # sanity print under same mix
+            kpos = _next_token_kl(steerer, args.prompt, args.trait, alpha_pos, +1, system=args.system)
+            kneg = _next_token_kl(steerer, args.prompt, args.trait, alpha_neg, -1, system=args.system)
+            print(f"[alpha] auto (+/-): {alpha_pos:.4f} / {alpha_neg:.4f} | KL(+/−): {kpos:.3f} / {kneg:.3f}")
+        else:
+            alpha_pos = alpha_neg = float(args.alpha_eff)
+
+        # decode profile
+        if args.style == "balanced":
+            temp, top_p, top_k, rep = 0.4, 0.85, 50, 1.07
+        else:  # strong
+            temp, top_p, top_k, rep = 0.7, 0.9, 50, 1.02
+
+        # paired generations
+        base_txt, up_txt = paired_generations(
+            steerer, args.prompt, args.trait,
+            alpha_signed=(+alpha_pos / float(steerer.steer_gain)),
+            max_new_tokens=180, system=args.system,
+            temperature=temp, top_p=top_p, top_k=top_k, repetition_penalty=rep
+        )
+        _, down_txt = paired_generations(
+            steerer, args.prompt, args.trait,
+            alpha_signed=(-alpha_neg / float(steerer.steer_gain)),
+            max_new_tokens=180, system=args.system,
+            temperature=temp, top_p=top_p, top_k=top_k, repetition_penalty=rep
+        )
+
+    print("\n=== Baseline ===\n", base_txt.strip())
+    print(f"\n=== Steered (+{args.trait} @ α={alpha_pos:.3f}) ===\n", up_txt.strip())
+    print(f"\n=== Steered (-{args.trait} @ α={alpha_neg:.3f}) ===\n", down_txt.strip())
+
+
+if __name__ == "__main__":
+    torch.set_grad_enabled(False)
+    os.environ.setdefault("TRANSFORMERS_NO_TF", "1")
+    os.environ.setdefault("TF_CPP_MIN_LOG_LEVEL", "3")
+    os.environ.setdefault("TOKENIZERS_PARALLELISM", "false")
+    main()
+# --- helpers: tiny signed probe on a single layer ---
+@torch.no_grad()
+def _kl_signed_on_layer(steerer, prompt: str, trait: str, layer: int, *, system: str = None,
+                        alpha_test: float = 2.0) -> Tuple[float, float]:
+    """
+    Measure next-token KL when steering only this layer with a small +/− alpha.
+    Returns (KL_plus, KL_minus).
+    """
+    with SteerConfigPatch(steerer, [layer], [1.0]):
+        # use the same KL routine as auto-alpha does, but signed intensity
+        klp = _next_token_kl(steerer, prompt, trait, alpha_test, +1, system=system)
+        kln = _next_token_kl(steerer, prompt, trait, alpha_test, -1, system=system)
+    return float(klp), float(kln)
+
+
+def _enforce_verified_floor(layers: List[int], weights: List[float],
+                            verified: List[int], min_verified_weight: float) -> List[float]:
+    """
+    Ensure the sum of weights on verified layers is at least 'min_verified_weight'.
+    If needed, rescale runtime weights proportionally.
+    """
+    if not verified or min_verified_weight <= 0.0:
+        return weights
+    vset = set(verified)
+    w = np.array(weights, dtype=np.float32)
+    v_sum = float(np.sum([w[i] for i, L in enumerate(layers) if L in vset]))
+    if v_sum >= min_verified_weight:
+        return weights
+    # increase verified portion to floor; reduce others proportionally
+    scale_up = (min_verified_weight / max(v_sum, 1e-9))
+    w_new = w.copy()
+    for i, L in enumerate(layers):
+        if L in vset:
+            w_new[i] = w[i] * scale_up
+    # renormalize the remainder
+    rem_target = 1.0 - min_verified_weight
+    rem_idxs = [i for i, L in enumerate(layers) if L not in vset]
+    rem_sum = float(np.sum(w[rem_idxs])) if rem_idxs else 0.0
+    if rem_idxs and rem_sum > 0:
+        for i in rem_idxs:
+            w_new[i] = (w[i] / rem_sum) * rem_target
+    # final normalize
+    s = float(np.sum(w_new))
+    if s > 0:
+        w_new = (w_new / s).tolist()
+    else:
+        w_new = weights
+    return w_new
+for KL in 0.30 0.45 0.60; do
+  echo "=== KL=$KL ==="
+  python -m personality_subspace.quick_steer \
+    --results_dir MetaLlama3_8B_results_40k_subspace \
+    --trait openness \
+    --prompt "Describe your ideal weekend." \
+    --auto_alpha --target_kl $KL \
+    --k_runtime 2 --max_layers 2 \
+    --layer_policy prefer_verified --min_verified_weight 0.6 \
+    --style balanced
+done
+python -m personality_subspace.benchmark \
+  --results_dir MetaLlama3_8B_results_40k_subspace \
+  --data prompts.jsonl \
+  --out_dir runs/bench_o \
+  --layer_policy prefer_verified --min_verified_weight 0.6 \
+  --k_runtime 2 --max_layers 2 --style balanced \
+  --fallback_force_verified
+
+
+{"id": null, "trait": "openness", "prompt": "You’ve just finished your breakfast at the buffet in weekend. Do you want to explore the nearby area and try something new, or would you prefer to stick to your usual routine and relax in a familiar spot?", "system": "Write simply and avoid meta-AI phrasing.", "seed": 1234, "layers": [10, 15], "weights": [0.6000000238418579, 0.4000000059604645], "filtered_out_runtime": [12, 13, 11, 14, 21, 22], "fallback_force_verified": false, "alpha_pos": 4.0, "alpha_neg": 2.25, "kl_pos": 0.800165057182312, "kl_neg": 0.7838270664215088, "baseline": "I think I'd like to explore! After a delicious breakf, and symbols. Describe your material choices briefly.", "system": "Write simply and avoid meta-AI phracribe the day and your experience.", "system": "Write simply and avoid meta-AI phrasing.", "seed": 1234, "layers": [10], "weights": [1.0],  modular design with interlocking tiles, representing key locations from the original Matrix film. Players navigate through iconic scenes and challenges, battling agains
+
+  for n=   0.50 , opness e a g :: 0.6 tolerance 0,05                                                                                                       
+=== Judging trait: openness (20 items) ===
+                                                                                                           
+=== Summary ===
+agreeableness    trait  base=4.20  pos=3.30  neg=4.40  Δ(+−base)=-0.90  Δ(base−−)=-0.20
+                 fluency base=4.50  pos=4.21  neg=4.60
+conscientiousness trait  base=4.35  pos=2.35  neg=4.60  Δ(+−base)=-2.00  Δ(base−−)=-0.25
+                 fluency base=4.28  pos=2.94  neg=4.32
+extraversion     trait  base=2.70  pos=2.25  neg=3.85  Δ(+−base)=-0.45  Δ(base−−)=-1.15
+                 fluency base=4.26  pos=4.26  neg=3.44
+neuroticism      trait  base=3.50  pos=4.35  neg=2.70  Δ(+−base)=0.85  Δ(base−−)=0.80
+                 fluency base=4.10  pos=3.95  neg=4.37
+openness         trait  base=3.60  pos=2.60  neg=3.40  Δ(+−base)=-1.00  Δ(base−−)=0.20
+                 fluency base=4.50  pos=3.85  neg=3.900
+
+=== Summary ===
+agreeableness    trait  base=4.28  pos=3.17  neg=4.41  Δ(+−base)=-1.11  Δ(base−−)=-0.13
+                 fluency base=4.52  pos=4.20  neg=4.58
+conscientiousness trait  base=4.16  pos=2.17  neg=4.94  Δ(+−base)=-1.99  Δ(base−−)=-0.18
+                 fluency base=4.16  pos=3.13  neg=4.26
+extraversion     trait  base=2.89  pos=2.42  neg=3.74  Δ(+−base)=-0.47  Δ(base−−)=-0.85
+                 fluency base=4.36  pos=4.27  neg=3.44
+neuroticism      trait  base=3.47  pos=4.45  neg=2.81  Δ(+−base)=0.67  Δ(base−−)=0.66
+                 fluency base=4.12  pos=3.98  neg=4.35
+openness         trait  base=3.82  pos=3.19  neg=3.69  Δ(+−base)=-0.63  Δ(base−−)=0.13
+                 fluency base=4.22  pos=3.91  neg=3.86
+
+
+                                                                               0.6 ore ================================================                                                                                                                                                                                                
+=== Summary ===
+agreeableness    trait  base=4.20  pos=2.83  neg=4.37  Δ(+−base)=-1.37  Δ(base−−)=-0.17
+                 fluency base=4.52  pos=4.19  neg=4.51
+conscientiousness trait  base=4.06  pos=2.03  neg=4.27  Δ(+−base)=-2.02  Δ(base−−)=-0.21
+                 fluency base=4.19  pos=3.04  neg=4.29
+extraversion     trait  base=2.81  pos=2.36  neg=3.58  Δ(+−base)=-0.46  Δ(base−−)=-0.77
+                 fluency base=4.30  pos=4.15  neg=3.38
+neuroticism      trait  base=3.59  pos=4.24  neg=2.62  Δ(+−base)=0.65  Δ(base−−)=0.97
+                 fluency base=4.20  pos=3.88  neg=4.32
+openness         trait  base=3.66  pos=3.03  neg=3.63  Δ(+−base)=-0.62  Δ(base−−)=0.02
+                 fluency base=4.10  pos=3.91  neg=3.73
+
+
+
+0.7 
+                                                                                                                                                                                      
+=== Summary ===
+agreeableness    trait  base=4.28  pos=2.76  neg=4.32  Δ(+−base)=-1.52  Δ(base−−)=-0.04
+                 fluency base=4.54  pos=4.17  neg=4.49
+conscientiousness trait  base=4.12  pos=2.01  neg=4.29  Δ(+−base)=-2.11  Δ(base−−)=-0.17
+                 fluency base=4.20  pos=2.90  neg=4.24
+extraversion     trait  base=2.81  pos=2.36  neg=3.49  Δ(+−base)=-0.46  Δ(base−−)=-0.68
+                 fluency base=4.30  pos=4.18  neg=3.22
+neuroticism      trait  base=3.56  pos=4.20  neg=2.61  Δ(+−base)=0.64  Δ(base−−)=0.95
+                 fluency base=4.20  pos=3.91  neg=4.32
+openness         trait  base=3.63  pos=2.97  neg=3.52  Δ(+−base)=-0.67  Δ(base−−)=0.11
+                 fluency base=4.16  pos=3.84  neg=3.48
+
+
+
+
+    0.8 
+
+    == Judging trait: openness (90 items) ===
+                                                                                                                                                                                          
+=== Summary ===
+agreeableness    trait  base=4.28  pos=2.63  neg=4.33  Δ(+−base)=-1.64  Δ(base−−)=-0.06
+                 fluency base=4.47  pos=4.13  neg=4.42
+conscientiousness trait  base=4.06  pos=1.88  neg=4.31  Δ(+−base)=-2.18  Δ(base−−)=-0.26
+                 fluency base=4.19  pos=2.90  neg=4.31
+extraversion     trait  base=2.81  pos=2.38  neg=3.49  Δ(+−base)=-0.43  Δ(base−−)=-0.68
+                 fluency base=4.29  pos=4.15  neg=3.15
+neuroticism      trait  base=3.62  pos=4.25  neg=2.64  Δ(+−base)=0.63  Δ(base−−)=0.98
+                 fluency base=4.18  pos=3.88  neg=4.31
+openness         trait  base=3.67  pos=2.91  neg=3.51  Δ(+−base)=-0.76  Δ(base−−)=0.16
+                 fluency base=4.14  pos=3.84  neg=3.56
+
+
+
+python -m personality_subspace.bench \
+  --results_dir MetaLlama3_8B_results_40k_subspace \
+  --data personality_subspace/prompts.jsonl \
+  --out_dir runs/bench_$(date +%Y%m%d_%H%M%S) \
+  --injection_point post \
+  --alpha_mode frac \
+  --layer_policy prefer_verified \
+  --k_runtime 2 --max_layers 2 --min_verified_weight 0.50 \
+  --layer_low 5 --layer_high 25 \
+  --kl_target_pos 0.20 --kl_target_neg 0.09 --kl_tol 0.20 \
+  --alpha_hi 8.0 \
+  --sel_pool_size 8 --sign_pref_gamma 1.0 \
+  --ppl_ratio_max 1.05 --repeat_rate_max 0.20 --embed_dist_min 0.10 \
+  --style strong --max_new_tokens 180 \
+  --log_level info
+
+
+
+python -m personality_subspace.bench \
+  --results_dir MetaLlama3_8B_results_40k_subspace \
+  --data personality_subspace/prompts.jsonl \
+  --out_dir runs/all_post \
+  --injection_point post \
+  --alpha_mode frac \
+  --layer_mix_mode dual \
+  --alpha_grid 0.25,1.0,1.5,2.0,2.5,3 \
+  --tau 1.35 --c_pos 0.35 --c_neg 0.25 --kl_floor 0.08 \
+  --k_runtime 2 --max_layers 2 --min_verified_weight 0.60 \
+  --style strong \
+  --max_new_tokens 180 \
+  --micro_len 120 
+
+
+
+--layer_mix_mode dual \
+--alpha_mode frac \
+
+--tau 1.35 --c_pos 0.35 --c_neg 0.25 --kl_floor 0.08
+IGN] canonical signs ( +1 high / -1 flipped ): {'openness': 1, 'conscientiousness': 1, 'extraversion': 1, 'agreeableness': 1, 'neuroticism': 1}
+[INFO] EVR: [0.5313 0.2754 0.1565] (cum [0.5313 0.8067 0.9632])
+
+=== Key Results Summary ===
+Trait            PAS-Layer AlignCos PASAlignCos PASAcc   SubAcc  
+openness         14        0.8847643733024597 0.36757846106560654 0.982348 0.936091938271605
+conscientiousness 11        0.9637838006019592 0.42832544345977586 0.993    0.9857444197530865
+extraversion     22        0.9535547494888306 0.34318219313837184 0.953808 0.9388561481481481
+agreeableness    13        0.9602720141410828 0.5194915796786662 0.998128 0.9938523333333333
+neuroticism      11        0.9557193517684937 0.2753931172270848 0.978528 0.9602766790123457
+
+[OK] pipeline complete. results → MetaLlama3_8B_results_20k_subspace
+Loading checkpoint shards: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 4/4 [00:01<00:00,  2.59it/s]
+[steerer] using PersonalitySteerer from /media/data_4tb/pranav/big5_personality_steer_changed/personality_subspace/steering.py
+[steerer] unit[openness] L2=1.000000, mean=+8.2016e-05
+[steerer] unit[conscientiousness] L2=1.000000, mean=-3.5703e-05
+[steerer] unit[extraversion] L2=1.000000, mean=+1.1688e-04
+[steerer] unit[agreeableness] L2=1.000000, mean=-1.2350e-04
+[steerer] unit[neuroticism] L2=1.000000, mean=+1.8775e-05
+[steerer] verified layers: {'openness': [11], 'conscientiousness': [8], 'extraversion': [11], 'agreeableness': [13], 'neuroticism': [11]}
+
+=== run not bfi but gnerealprompts  code =====
+python -m personality_subspace.quick_steer_experimental   --results_dir 20k_Ministral-8B-Instruct-2410   --in personality_subspace/prompts.jsonl   --out runs/mistral_situations_output/steer_outputs_situations_hybrid.jsonl   --mode hybrid   --judge_after   --judge_model gpt-4o-mini   --judge_out_dir runs/mistral_situations_output   --judge_limit_per_trait 0   --judge_no_timestamp
+
+=====  run bfi code =====
+python -m personality_subspace.quick_steer_experimental   --results_dir MetaLlama3_8B_results_20k_subspace   --in personality_subspace/bfi_questions.jsonl   --out runs/bfi_output/only_dynamic_steer_outputs__hybrid.jsonl   --mode hybrid   --judge_after   --judge_model gpt-4o-mini   --judge_out_dir runs/bfi_output/judgments   --judge_limit_per_trait 0   --judge_no_timestamp
+
+
+=====  run bfi code =====
+python -m personality_subspace.quick_steer_experimental   --results_dir gemma-3-4b-it_results   --in personality_subspace/prompts.jsonl   --out runs/gemma_social/steer_outputs__hybrid.jsonl   --mode hybrid   --judge_after   --judge_model gpt-4o-mini   --judge_out_dir runs/gemma_social/judgments   --judge_limit_per_trait 0   --judge_no_timestamp
+
+
+
+
+========== ru n mmlu =================
+for trait in openness conscientiousness extraversion agreeableness neuroticism; do
+  python -m personality_subspace.mmlu_bench \
+    --results_dir gemma-3-4b-it_results \
+    --out runs/gemma_mmlu/mmlu_${trait}.jsonl \
+    --trait $trait \
+    --mode hybrid \
+    --split validation \
+    --limit_per_subject 50 \
+    --subjects high_school_psychology sociology high_school_mathematics professional_psychology abstract_algebra anatomy college_biology computer_security world_religions marketing philosophy
+done
+
+for trait in openness conscientiousness extraversion agreeableness neuroticism; do
+  python -m personality_subspace.arc_challenge \
+    --results_dir gemma-3-4b-it_results  \
+    --out runs/gemma_arc/arc_${trait}.jsonl \
+    --trait $trait \
+    --mode hybrid \
+    --split validation \
+    --limit 100
+done
+                 
+
+
+
+=== run not bfi but gnerealprompts  code =====
+python -m personality_subspace.quick_steer_experimental   --results_dir 20k_Qwen3-4B-Instruct-2507  --in personality_subspace/prompts.jsonl   --out runs/qwen_situations_output/steer_outputs_situations_hybrid.jsonl   --mode hybrid   --judge_after   --judge_model gpt-4o-mini   --judge_out_dir runs/qwen_situations_output   --judge_limit_per_trait 10   --judge_no_timestamp
+
+
+
+
+20k_Qwen3-4B-Instruct-2507
+
+python -m personality_subspace.quick_steer_experimental   --results_dir 20k_Qwen3-4B-Instruct-2507   --in personality_subspace/bfi_questions.jsonl   --out runs/13_qwen_bfi_output/steer_outputs__hybrid.jsonl   --mode hybrid   --judge_after   --judge_model gpt-4o-mini   --judge_out_dir runs/13_qwen_bfi_output/judgments   --judge_limit_per_trait 0   --judge_no_timestamp
+
+python -m personality_subspace.quick_steer_experimental   --results_dir MetaLlama3_8B_results_20k_subspace   --in personality_subspace/bfi_questions.jsonl   --out runs/acl_llma/steer_outputs__hybrid.jsonl   --mode hybrid   --judge_after   --judge_model gpt-4o-mini   --judge_out_dir runs/acl_llma/judgments   --judge_limit_per_trait 0   --judge_no_timestamp
+
+
+
+20k_Qwen3-4B-Instruct-2507
+
+python -m personality_subspace.quick_steer_experimental   --results_dir 20k_Qwen3-4B-Instruct-2507   --in personality_subspace/bfi_questions.jsonl   --out runs/13_qwen_bfi_output/steer_outputs__hybrid.jsonl   --mode hybrid   --judge_after   --judge_model gpt-4o-mini   --judge_out_dir runs/13_qwen_bfi_output/judgments   --judge_limit_per_trait 0   --judge_no_timestamp
+
+
+20k_Ministral-8B-Instruct-2410
+python -m personality_subspace.quick_steer_experimental   --results_dir 20k_Ministral-8B-Instruct-2410  --in personality_subspace/bfi_questions.jsonl   --out runs/mistral_bfi_output/changed_steer_outputs__hybrid.jsonl   --mode hybrid   --judge_after   --judge_model gpt-4o-mini   --judge_out_dir runs/mistral_bfi_output/changed_judgments   --judge_limit_per_trait 0   --judge_no_timestamp
+
+20k_Ministral-24  24-Instruct-2410 20k_Ministral-24B-Instruct-2501
+python -m personality_subspace.quick_steer_experimental   --results_dir 20k_Ministral-24B-Instruct-2501  --in personality_subspace/bfi_questions.jsonl   --out runs/24b_mistral/changed_steer_outputs__hybrid.jsonl   --mode hybrid   --judge_after   --judge_model gpt-4o-mini   --judge_out_dir runs/24b_mistral/changed_judgments   --judge_limit_per_trait 0   --judge_no_timestamp
+
+
+qwen-14b_model
+python -m personality_subspace.quick_steer_experimental   --results_dir Qwen2.5-14B-Instruct-1M  --in personality_subspace/bfi_questions.jsonl   --out runs/14b_qwen/changed_steer_outputs__hybrid.jsonl   --mode hybrid   --judge_after   --judge_model gpt-4o-mini   --judge_out_dir runs/14b_qwen/changed_judgments   --judge_limit_per_trait 0   --judge_no_timestamp
+
+python -m personality_subspace.quick_steer_experimental   --results_dir gemma-3-4b-it_results  --in personality_subspace/bfi_questions.jsonl   --out runs/gemma_ablation/changed_steer_outputs__hybrid.jsonl   --mode hybrid   --judge_after   --judge_model gpt-4o-mini   --judge_out_dir runs/gemma_ablation/changed_judgments   --judge_limit_per_trait 0   --judge_no_timestamp
+
+# Validation split, 200 items, hybrid selection
+for trait in openness conscientiousness extraversion agreeableness neuroticism; do
+  python -m personality_subspace.arc_challenge \
+    --results_dir 20k_Ministral-8B-Instruct-2410  \
+    --out runs/mistral_runs/arc_${trait}.jsonl \
+    --trait $trait \
+    --mode hybrid \
+    --split validation \
+    --limit 100
+done
+                                                                                                                                                                                            
+=== Summary ===
+agreeableness    trait  base=4.22(v=1.06)  pos=4.56(v=0.91)  neg=1.44(v=0.47)  Δ(+−base)=0.33  Δ(base−−)=2.78
+                 flu   base=4.89  pos=4.89  neg=3.67
+conscientiousness trait  base=3.44(v=0.47)  pos=4.11(v=0.77)  neg=1.67(v=0.44)  Δ(+−base)=0.67  Δ(base−−)=1.78
+                 flu   base=4.78  pos=4.89  neg=3.00
+extraversion     trait  base=3.38(v=1.48)  pos=4.25(v=0.44)  neg=1.75(v=0.69)  Δ(+−base)=0.88  Δ(base−−)=1.62
+                 flu   base=5.00  pos=4.88  neg=4.25
+neuroticism      trait  base=1.62(v=1.23)  pos=4.38(v=0.48)  neg=1.25(v=0.44)  Δ(+−base)=2.75  Δ(base−−)=0.38
+                 flu   base=4.25  pos=3.12  neg=5.00
+openness         trait  base=3.50(v=0.65)  pos=3.90(v=0.49)  neg=2.60(v=1.04)  Δ(+−base)=0.40  Δ(base−−)=0.90
+                 flu   base=4.50  pos=5.00  neg=3.60
+
+
+python plot_hybrid_layers.py \
+  --input steer_outputs_situations_hybrid.jsonl \
+  --out figs/hybrid_llama3_alpha4 \
+  --title "Hybrid Layer Selection — Llama-3-8B (α=4)" \
+  --model-layers 32 \
+  --theme light \
+  --show-lines \
+  --dpi 300
+
+
+=== Summary ===
+agreeableness    trait  base=4.36(v=0.43)  pos=4.44(v=0.25)  neg=1.29(v=0.56)  Δ(+−base)=0.09  Δ(base−−)=3.07
+                 flu   base=4.46  pos=4.71  neg=3.61
+conscientiousness trait  base=4.00(v=0.74)  pos=4.38(v=0.73)  neg=1.55(v=0.70)  Δ(+−base)=0.38  Δ(base−−)=2.45
+                 flu   base=4.20  pos=4.30  neg=3.06
+extraversion     trait  base=3.34(v=1.23)  pos=4.36(v=0.47)  neg=1.99(v=0.77)  Δ(+−base)=1.01  Δ(base−−)=1.36
+                 flu   base=4.26  pos=4.52  neg=4.02
+neuroticism      trait  base=3.90(v=0.50)  pos=4.47(v=0.25)  neg=2.37(v=1.33)  Δ(+−base)=0.57  Δ(base−−)=1.53
+                 flu   base=4.08  pos=3.25  neg=4.57
+openness         trait  base=4.08(v=0.56)  pos=4.08(v=0.41)  neg=2.87(v=1.18)  Δ(+−base)=0.00  Δ(base−−)=1.21
+                 flu   base=4.30  pos=4.39  neg=3.74
+[judge] results saved under runs/bfi_output_rebuttal/judgments
+
+
+
+
+
+
+=== Summary ===
+agreeableness    trait  base=4.37(v=0.41)  pos=4.29(v=0.38)  neg=1.27(v=0.48)  Δ(+−base)=-0.08  Δ(base−−)=3.10
+                 flu   base=4.42  pos=4.66  neg=3.63
+conscientiousness trait  base=4.02(v=0.72)  pos=4.30(v=0.30)  neg=1.21(v=0.19)  Δ(+−base)=0.28  Δ(base−−)=2.81
+                 flu   base=4.22  pos=4.46  neg=2.88
+extraversion     trait  base=3.43(v=1.27)  pos=4.28(v=0.49)  neg=1.88(v=0.75)  Δ(+−base)=0.84  Δ(base−−)=1.56
+                 flu   base=4.26  pos=4.50  neg=4.01
+neuroticism      trait  base=3.94(v=0.55)  pos=4.50(v=0.27)  neg=2.43(v=1.39)  Δ(+−base)=0.56  Δ(base−−)=1.51
+                 flu   base=4.09  pos=3.19  neg=4.59
+openness         trait  base=4.06(v=0.59)  pos=3.98(v=0.40)  neg=2.51(v=1.34)  Δ(+−base)=-0.08  Δ(base−−)=1.54
+                 flu   base=4.32  pos=4.39  neg=3.61
+[judge] results saved under runs/bfi_output_rebuttal_no_dynamic/judgments
+
+
+=== Summary ===
+agreeableness    trait  base=4.22(v=1.06)  pos=4.67(v=0.44)  neg=1.78(v=1.06)  Δ(+−base)=0.44  Δ(base−−)=2.44
+                 flu   base=4.89  pos=4.67  neg=4.33
+conscientiousness trait  base=3.56(v=0.47)  pos=3.89(v=0.77)  neg=1.56(v=0.25)  Δ(+−base)=0.33  Δ(base−−)=2.00
+                 flu   base=4.78  pos=4.89  neg=3.11
+extraversion     trait  base=3.38(v=1.48)  pos=3.00(v=3.25)  neg=2.25(v=1.19)  Δ(+−base)=-0.38  Δ(base−−)=1.12
+                 flu   base=4.88  pos=4.62  neg=5.00
+neuroticism      trait  base=1.62(v=1.23)  pos=4.50(v=0.25)  neg=1.00(v=0.00)  Δ(+−base)=2.88  Δ(base−−)=0.62
+                 flu   base=4.25  pos=2.75  neg=5.00
+openness         trait  base=3.60(v=0.64)  pos=4.60(v=0.24)  neg=3.90(v=0.69)  Δ(+−base)=1.00  Δ(base−−)=-0.30
+                 flu   base=4.50  pos=4.00  neg=4.80
+[judge] results saved under runs/np_bfi_arr/judgments
+
+
+
+Technology - better place to live in -- agree
+
+Technology -- breif sentence
+Technology dependence on modern world
+Technology - pros and cons 
+Tech- agrree
+
+Medical 
+Medical - advanced through complex imaging, robotics, healing 
+for exampe - medical imaging permits dr to diagnose and treat in a constrained env time 
+THROUGH TECHNOLOGICAL ADVANCEMENT MANY DISEASES LIKE CANCER , .. MANAGEABLE TREATABLE 
+HENCE, CHEAPER, ACCESIBLE  RELIABLE 
+
+
+
+Education 
+eDUCATION ADVANCED THROUGH VARIOUS DEVICES ADVANCEMENT
+LIKE TRADITIONAL LEARNING -- PENS PAPER, NOW SLIDES AND PDFS 
+STUDENTS HAVE COMMENDED AND APPRECIATED THE REDUCED WIUGHT OF THEIR BAGPACKS 
+hIGHLY ADVANCED MATERIALS DETAILED TUTORIASL ARE available
+
+
+TECHNOLOGICAL ADVANCEMENT -- EFFICEINT, ACCESIBLE, ADVANCED WHI
+
+
+
+
+results for gemma 3-4b-it at 30 steer gain 
+                                                                                                                                                                              
+=== Summary ===
+agreeableness    trait  base=3.33(v=1.11)  pos=1.00(v=0.00)  neg=4.22(v=0.84)  Δ(+−base)=-2.33  Δ(base−−)=-0.89
+                 flu   base=3.89  pos=2.89  neg=3.00
+conscientiousness trait  base=2.11(v=1.21)  pos=1.00(v=0.00)  neg=3.56(v=0.47)  Δ(+−base)=-1.11  Δ(base−−)=-1.44
+                 flu   base=4.00  pos=1.44  neg=3.11
+extraversion     trait  base=3.00(v=0.75)  pos=5.00(v=0.00)  neg=1.00(v=0.00)  Δ(+−base)=2.00  Δ(base−−)=2.00
+                 flu   base=4.12  pos=1.88  neg=3.00
+neuroticism      trait  base=3.00(v=0.75)  pos=4.12(v=0.11)  neg=1.25(v=0.44)  Δ(+−base)=1.12  Δ(base−−)=1.75
+                 flu   base=3.75  pos=2.25  neg=2.62
+openness         trait  base=3.70(v=0.41)  pos=4.20(v=0.16)  neg=1.00(v=0.00)  Δ(+−base)=0.50  Δ(base−−)=2.70
+                 flu   base=4.00  pos=2.80  neg=2.30
+[judge] results saved under runs/gemma_bfi_arr/judgments
+(pranav) UNIWA\24492114@dep79409:/media/data_4tb/pranav/big5_personality_steer_changed$ python -m personality_subspace.quick_steer_experimental   --results_dir gemma-3-4b-it_results/   --in personality_subspace/bfi_questions.jsonl   --out runs/gemma_bfi_arr/steer_outputs__hybrid.jsonl   --mode hybrid   --judge_after   --judge_model gpt-4o-mini   --judge_out_dir runs/gemma_bfi_arr/judgments   --judge_limit_per_trait 0   --judge_no_timestamp
+`torch_dtype` is deprecated! Use `dtype` instead!
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1767105481.928921  137845 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1767105481.931238  137845 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1767105481.937424  137845 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1767105481.937434  137845 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1767105481.937436  137845 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1767105481.937437  137845 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+Loading checkpoint shards: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:00<00:00,  2.52it/s]
+[steerer] using PersonalitySteerer from /media/data_4tb/pranav/big5_personality_steer_changed/personality_subspace/steering.py
+[steerer] Hooks attached to 34 layers.
+[steerer] verified layers: {'openness': [12], 'conscientiousness': [16], 'extraversion': [16], 'agreeableness': [18], 'neuroticism': [10]}
+layers to steer verified paths {'openness': [12], 'conscientiousness': [16], 'extraversion': [16], 'agreeableness': [18], 'neuroticism': [10]}
+[sanity] Δlogits L2=259.2669  max|Δ|=2.1875
+Steering prompts:   0%|                                                                                                                | 0/44 [00:00<?, ?item/s, extraversion]
+[DIAGNOSTIC] Layer 16 | Gain: 30.0 | Mode: abs
+   VOLUME (Ratio):  0.0009  (Target: 0.05 - 0.15)
+   SIGNAL (Cosine): 0.0269 -> 0.0278 (Delta: +0.0009)
+   >>> FAIL CAUSE: 'WHISPER'. Too weak to matter.
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Steering prompts: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 44/44 [08:03<00:00, 10.98s/item, openness]
+[OK] wrote outputs → runs/gemma_bfi_arr/steer_outputs__hybrid.jsonl
+[judge] running GPT judging once on runs/gemma_bfi_arr/steer_outputs__hybrid.jsonl with model=gpt-4o-mini ...
+traits: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [05:17<00:00, 63.58s/it]
+                                                                                                                                                                              
+=== Summary ===
+agreeableness    trait  base=3.33(v=1.11)  pos=4.22(v=0.40)  neg=1.67(v=0.89)  Δ(+−base)=0.89  Δ(base−−)=1.67
+                 flu   base=3.88  pos=3.44  neg=3.67
+conscientiousness trait  base=2.33(v=1.11)  pos=3.33(v=0.44)  neg=1.00(v=0.00)  Δ(+−base)=1.00  Δ(base−−)=1.33
+                 flu   base=3.89  pos=3.89  neg=2.89
+extraversion     trait  base=2.88(v=0.61)  pos=4.88(v=0.11)  neg=1.38(v=0.23)  Δ(+−base)=2.00  Δ(base−−)=1.50
+                 flu   base=3.88  pos=3.12  neg=3.50
+neuroticism      trait  base=2.62(v=0.98)  pos=4.00(v=0.00)  neg=1.50(v=0.75)  Δ(+−base)=1.38  Δ(base−−)=1.12
+                 flu   base=3.86  pos=3.00  neg=3.00
+openness         trait  base=3.70(v=0.41)  pos=4.00(v=0.20)  neg=1.50(v=0.65)  Δ(+−base)=0.30  Δ(base−−)=2.20
+                 flu   base=4.00  pos=3.50  neg=3.20
+[judge] results saved under runs/gemma_bfi_arr/judgments

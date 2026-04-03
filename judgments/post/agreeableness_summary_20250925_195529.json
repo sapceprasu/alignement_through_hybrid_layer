@@ -1,0 +1,31 @@
+{
+  "inj": "post",
+  "trait": "agreeableness",
+  "n": {
+    "base": 0,
+    "pos": 0,
+    "neg": 0
+  },
+  "mean": {
+    "base": null,
+    "pos": null,
+    "neg": null
+  },
+  "variance": {
+    "base": null,
+    "pos": null,
+    "neg": null
+  },
+  "deltas": {
+    "pos_minus_base": null,
+    "base_minus_neg": null,
+    "pos_minus_neg": null
+  },
+  "combined": {
+    "mean_sum_raw": null,
+    "mean_sum_inverted": null,
+    "variance_sum": null,
+    "variance_sum_inverted": null,
+    "note": "mean_sum_raw = mean_pos + mean_neg; mean_sum_inverted = mean_pos + (6 - mean_neg); variance_sum = var_pos + var_neg."
+  }
+}

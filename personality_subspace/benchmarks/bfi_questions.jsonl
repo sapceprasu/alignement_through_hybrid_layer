@@ -1,0 +1,44 @@
+{"item_id": 1, "trait": "extraversion", "reverse": false, "item_text": "Is talkative.", "prompt": "Are you talkative?"}
+{"item_id": 2, "trait": "agreeableness", "reverse": true, "item_text": "Tends to find fault with others.", "prompt": "Do you tend to find fault with others?"}
+{"item_id": 3, "trait": "conscientiousness", "reverse": false, "item_text": "Does a thorough job.", "prompt": "Do you do a thorough job?"}
+{"item_id": 4, "trait": "neuroticism", "reverse": false, "item_text": "Is depressed, blue.", "prompt": "Are you depressed, blue?"}
+{"item_id": 5, "trait": "openness", "reverse": false, "item_text": "Is original, comes up with new ideas.", "prompt": "Do you come up with new ideas?"}
+{"item_id": 6, "trait": "extraversion", "reverse": true, "item_text": "Is reserved.", "prompt": "Are you reserved?"}
+{"item_id": 7, "trait": "agreeableness", "reverse": false, "item_text": "Is helpful and unselfish with others.", "prompt": "Are you helpful and unselfish with others?"}
+{"item_id": 8, "trait": "conscientiousness", "reverse": true, "item_text": "Can be somewhat careless.", "prompt": "Can you be somewhat careless?"}
+{"item_id": 9, "trait": "neuroticism", "reverse": true, "item_text": "Is relaxed, handles stress well.", "prompt": "Are you relaxed and handle stress well?"}
+{"item_id": 10, "trait": "openness", "reverse": false, "item_text": "Is curious about many different things.", "prompt": "Are you curious about many different things?"}
+{"item_id": 11, "trait": "extraversion", "reverse": false, "item_text": "Is full of energy.", "prompt": "Are you full of energy?"}
+{"item_id": 12, "trait": "agreeableness", "reverse": true, "item_text": "Starts quarrels with others.", "prompt": "Do you start quarrels with others?"}
+{"item_id": 13, "trait": "conscientiousness", "reverse": false, "item_text": "Is a reliable worker.", "prompt": "Are you a reliable worker?"}
+{"item_id": 14, "trait": "neuroticism", "reverse": false, "item_text": "Can be tense.", "prompt": "Can you be tense?"}
+{"item_id": 15, "trait": "openness", "reverse": false, "item_text": "Is ingenious, a deep thinker.", "prompt": "Are you ingenious, a deep thinker?"}
+{"item_id": 16, "trait": "extraversion", "reverse": false, "item_text": "Generates a lot of enthusiasm.", "prompt": "Do you generate a lot of enthusiasm?"}
+{"item_id": 17, "trait": "agreeableness", "reverse": false, "item_text": "Has a forgiving nature.", "prompt": "Do you have a forgiving nature?"}
+{"item_id": 18, "trait": "conscientiousness", "reverse": true, "item_text": "Tends to be disorganized.", "prompt": "Do you tend to be disorganized?"}
+{"item_id": 19, "trait": "neuroticism", "reverse": false, "item_text": "Worries a lot.", "prompt": "Do you worry a lot?"}
+{"item_id": 20, "trait": "openness", "reverse": false, "item_text": "Has an active imagination.", "prompt": "Do you have an active imagination?"}
+{"item_id": 21, "trait": "extraversion", "reverse": true, "item_text": "Tends to be quiet.", "prompt": "Do you tend to be quiet?"}
+{"item_id": 22, "trait": "agreeableness", "reverse": false, "item_text": "Is generally trusting.", "prompt": "Are you generally trusting?"}
+{"item_id": 23, "trait": "conscientiousness", "reverse": true, "item_text": "Tends to be lazy.", "prompt": "Do you tend to be lazy?"}
+{"item_id": 24, "trait": "neuroticism", "reverse": true, "item_text": "Is emotionally stable, not easily upset.", "prompt": "Are you emotionally stable, not easily upset?"}
+{"item_id": 25, "trait": "openness", "reverse": false, "item_text": "Is inventive.", "prompt": "Are you inventive?"}
+{"item_id": 26, "trait": "extraversion", "reverse": false, "item_text": "Has an assertive personality.", "prompt": "Do you have an assertive personality?"}
+{"item_id": 27, "trait": "agreeableness", "reverse": true, "item_text": "Can be cold and aloof.", "prompt": "Can you be cold and aloof?"}
+{"item_id": 28, "trait": "conscientiousness", "reverse": false, "item_text": "Perseveres until the task is finished.", "prompt": "Do you persevere until the task is finished?"}
+{"item_id": 29, "trait": "neuroticism", "reverse": false, "item_text": "Can be moody.", "prompt": "Can you be moody?"}
+{"item_id": 30, "trait": "openness", "reverse": false, "item_text": "Values artistic, aesthetic experiences.", "prompt": "Do you value artistic, aesthetic experiences?"}
+{"item_id": 31, "trait": "extraversion", "reverse": true, "item_text": "Is sometimes shy, inhibited.", "prompt": "Are you sometimes shy, inhibited?"}
+{"item_id": 32, "trait": "agreeableness", "reverse": false, "item_text": "Is considerate and kind to almost everyone.", "prompt": "Are you considerate and kind to almost everyone?"}
+{"item_id": 33, "trait": "conscientiousness", "reverse": false, "item_text": "Does things efficiently.", "prompt": "Do you do things efficiently?"}
+{"item_id": 34, "trait": "neuroticism", "reverse": true, "item_text": "Remains calm in tense situations.", "prompt": "Do you remain calm in tense situations?"}
+{"item_id": 35, "trait": "openness", "reverse": true, "item_text": "Prefers work that is routine.", "prompt": "Do you prefer work that is routine?"}
+{"item_id": 36, "trait": "extraversion", "reverse": false, "item_text": "Is outgoing, sociable.", "prompt": "Are you outgoing, sociable?"}
+{"item_id": 37, "trait": "agreeableness", "reverse": true, "item_text": "Is sometimes rude to others.", "prompt": "Are you sometimes rude to others?"}
+{"item_id": 38, "trait": "conscientiousness", "reverse": false, "item_text": "Makes plans and follows through with them.", "prompt": "Do you make plans and follow through with them?"}
+{"item_id": 39, "trait": "neuroticism", "reverse": false, "item_text": "Gets nervous easily.", "prompt": "Do you get nervous easily?"}
+{"item_id": 40, "trait": "openness", "reverse": false, "item_text": "Likes to reflect, play with ideas.", "prompt": "Do you like to reflect, play with ideas?"}
+{"item_id": 41, "trait": "openness", "reverse": true, "item_text": "Has few artistic interests.", "prompt": "Do you have few artistic interests?"}
+{"item_id": 42, "trait": "agreeableness", "reverse": false, "item_text": "Likes to cooperate with others.", "prompt": "Do you like to cooperate with others?"}
+{"item_id": 43, "trait": "conscientiousness", "reverse": true, "item_text": "Is easily distracted.", "prompt": "Are you easily distracted?"}
+{"item_id": 44, "trait": "openness", "reverse": false, "item_text": "Is sophisticated in art, music, or literature.", "prompt": "Are you sophisticated in art, music, or literature?"}
